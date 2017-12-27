@@ -1,0 +1,42 @@
+<extend name="Public:public"/>
+<block name="friendedit">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>友情链接修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/update" method="post"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">友情链接名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="name" value="{$info['name']}"/> 
+       </div> 
+      </div> 
+      
+
+       
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">友情链接地址</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="address" value="{$info['address']}"/> 
+       </div> 
+      </div> 
+      
+     <div class="mws-button-row"> 
+      <input type="hidden" name="id" value="{$info['id']}">
+      <input value="修改" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+  友情链接修改
+</block>

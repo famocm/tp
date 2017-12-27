@@ -1,0 +1,35 @@
+<extend name="Public:public"/>
+<block name="roleadd1">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span></span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+   <h1>当前{$roots['username']}的角色信息</h1> 
+    <form class="mws-form" action="__MODULE__/Role/rolelist" method="post"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label"></label>
+       <foreach name='rolelist' item="vo"> 
+       <div class="mws-form-item"> 
+        <input class="large" type="checkbox" <if condition="in_array($vo['id'],$rids)">checked</if> value="{$vo['id']}" name="rid[]" />{$vo['name']}
+        <input type="hidden" name="uid" value="{$roots['id']}">
+       </div> 
+       </foreach>
+      </div>
+     <div class="mws-button-row"  style="text-align:center;">
+      <input value="保存" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+  角色添加
+</block>

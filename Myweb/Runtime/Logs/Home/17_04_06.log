@@ -1,0 +1,349 @@
+[ 2017-04-06T11:35:38+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.128007s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-06T11:35:47+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T17:21:32+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.122007s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-06T17:21:40+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.016001s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T17:25:28+08:00 ] 127.0.0.1 /index.php/Home/Index/Personal/index
+ERR: 非法操作:Personal
+
+[ 2017-04-06T18:19:04+08:00 ] 127.0.0.1 /index.php/Home/Personal/__PUCLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css
+ERR: 非法操作:__PUCLIC__
+
+[ 2017-04-06T18:19:04+08:00 ] 127.0.0.1 /index.php/Home/Personal/__PUCLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css
+ERR: 非法操作:__PUCLIC__
+
+[ 2017-04-06T18:19:04+08:00 ] 127.0.0.1 /index.php/Home/Personal/__PUCLIC__/Homes/css/personal.css
+ERR: 非法操作:__PUCLIC__
+
+[ 2017-04-06T18:19:04+08:00 ] 127.0.0.1 /index.php/Home/Personal/__PUCLIC__/Homes/css/systyle.css
+ERR: 非法操作:__PUCLIC__
+
+[ 2017-04-06T18:28:32+08:00 ] 127.0.0.1 /index.php/Home/Personal/basic/js/jquery.min.js
+ERR: 非法操作:basic
+
+[ 2017-04-06T18:36:08+08:00 ] 127.0.0.1 /index.php/Home/Personal/address.html
+ERR: 非法操作:address
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/amazeui.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/admin.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/css/personal.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/css/infstyle.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/js/jquery.min.js
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/js/amazeui.js
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T18:49:34+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/js/amazeui.js
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T18:56:42+08:00 ] 127.0.0.1 /index.php/Home/Personal/address.html
+ERR: 非法操作:address
+
+[ 2017-04-06T19:08:08+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/admin.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T19:08:08+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/amazeui.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T19:08:08+08:00 ] 127.0.0.1 /index.php/Home/css/infstyle.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T19:08:08+08:00 ] 127.0.0.1 /index.php/Home/css/personal.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T19:08:18+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/admin.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T19:08:18+08:00 ] 127.0.0.1 /index.php/Home/css/personal.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T19:08:18+08:00 ] 127.0.0.1 /index.php/Home/AmazeUI-2.4.2/assets/css/amazeui.css
+ERR: 无法加载控制器:AmazeUI-2.4.2
+
+[ 2017-04-06T19:08:18+08:00 ] 127.0.0.1 /index.php/Home/css/infstyle.css
+ERR: 无法加载控制器:Css
+
+[ 2017-04-06T20:00:18+08:00 ] 127.0.0.1 /index.php/Home/Personal/address
+ERR: syntax error, unexpected '}'
+
+[ 2017-04-06T20:09:01+08:00 ] 127.0.0.1 /index.php/Home/Personal/comment.html
+ERR: 非法操作:comment
+
+[ 2017-04-06T20:09:49+08:00 ] 127.0.0.1 /index.php/Home/Personal/comment.html
+ERR: 非法操作:comment
+
+[ 2017-04-06T20:30:13+08:00 ] 127.0.0.1 /index.php/Home/Personal/news.html
+ERR: 非法操作:news
+
+[ 2017-04-06T20:49:03+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.235013s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-06T20:49:10+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.025002s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-06T21:06:28+08:00 ] 127.0.0.1 /index.php/Home/Personal/password.html
+ERR: 非法操作:password
+
+[ 2017-04-06T21:06:32+08:00 ] 127.0.0.1 /index.php/Home/Personal/setpay.html
+ERR: 非法操作:setpay
+
+[ 2017-04-06T21:06:38+08:00 ] 127.0.0.1 /index.php/Home/Personal/bindphone.html
+ERR: 非法操作:bindphone
+
+[ 2017-04-06T21:06:41+08:00 ] 127.0.0.1 /index.php/Home/Personal/email.html
+ERR: 非法操作:email
+
+[ 2017-04-06T21:06:46+08:00 ] 127.0.0.1 /index.php/Home/Personal/idcard.html
+ERR: 非法操作:idcard
+
+[ 2017-04-06T21:31:11+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.002001s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-06T21:31:13+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T21:31:42+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T21:32:00+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-06T21:32:03+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T21:32:15+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T21:32:17+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-06T21:32:19+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?name=11111111
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T22:36:01+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:02+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:02+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:53+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:54+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:54+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:54+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:56+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:57+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:57+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:58+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:58+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:58+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:59+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:59+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:36:59+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:jia
+
+[ 2017-04-06T22:38:14+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-06T22:43:07+08:00 ] 127.0.0.1 /index.php/Home/Bycar/index.html
+ERR: syntax error, unexpected '}'
+
+[ 2017-04-06T22:45:50+08:00 ] 127.0.0.1 /index.php/Home/Bycar/jia?num=11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.033002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

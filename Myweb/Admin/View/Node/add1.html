@@ -1,0 +1,43 @@
+<extend name="Public:public"/>
+<block name="nodeadd1">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>节点添加</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/insert" method="post"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">节点名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="name" /> 
+       </div> 
+      </div> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">控制器名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="controller"/> 
+       </div> 
+      </div> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">方法名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="function"/> 
+       </div> 
+      </div>
+     <div class="mws-button-row"  style="text-align:center;">
+      <input value="添加" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+  角色添加
+</block>

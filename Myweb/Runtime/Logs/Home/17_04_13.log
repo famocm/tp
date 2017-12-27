@@ -1,0 +1,460 @@
+[ 2017-04-13T00:02:18+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000671s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000987s ]
+
+[ 2017-04-13T00:02:19+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001165s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000856s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2017-04-13T00:02:22+08:00 ] 127.0.0.1 /index.php/Home/Bycar/update?id=22
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000681s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000956s ]
+
+[ 2017-04-13T00:02:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001135s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.016458s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000834s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2017-04-13T00:02:25+08:00 ] 127.0.0.1 /index.php/Home/Pay/checkpay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001213s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.001037s ]
+SQL: SELECT * FROM `address` WHERE ( id=15 )  [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2017-04-13T00:02:28+08:00 ] 127.0.0.1 /index.php/Home/Bycar/dopayes?id=15
+ERR: 非法数据对象！:[price=>30.00]
+
+[ 2017-04-13T00:04:18+08:00 ] 127.0.0.1 /index.php/Home/Bycar/dopayes?id=15
+ERR: 非法数据对象！:[integral=>11]
+
+[ 2017-04-13T00:12:11+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000668s ]
+SQL: SELECT * FROM `goods` WHERE ( id=250 )  [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2017-04-13T00:12:12+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000611s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000695s ]
+SQL: SELECT * FROM `goods` WHERE ( id=250 )  [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000879s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000955s ]
+
+[ 2017-04-13T00:12:20+08:00 ] 127.0.0.1 /index.php/Home/Bycar/update?id=250
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000758s ]
+SQL: SELECT * FROM `goods` WHERE ( id=250 )  [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2017-04-13T00:12:21+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001257s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001348s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2017-04-13T00:12:23+08:00 ] 127.0.0.1 /index.php/Home/Pay/checkpay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.000621s ]
+SQL: SELECT * FROM `address` WHERE ( id=15 )  [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2017-04-13T01:18:50+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001353s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.000930s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001372s ]
+
+[ 2017-04-13T01:18:55+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001346s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.000688s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000997s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2017-04-13T01:18:58+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001117s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.000921s ]
+SQL: SELECT * FROM `users` WHERE `username` = 'ccmm'  [ RunTime:0.001221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2017-04-13T01:19:38+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001460s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000845s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001179s ]
+
+[ 2017-04-13T01:19:38+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001943s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001606s ]
+
+[ 2017-04-13T01:19:43+08:00 ] 127.0.0.1 /index.php/Home/Bycar/update?id=22
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001367s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000844s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000786s ]
+
+[ 2017-04-13T01:19:43+08:00 ] 127.0.0.1 /index.php/Home/Bycar/update?id=22
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.000689s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000923s ]
+
+[ 2017-04-13T01:19:45+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001334s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001056s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.000539s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2017-04-13T01:19:52+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001056s ]
+SQL: SELECT * FROM `district` WHERE ( upid=1 )  [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2017-04-13T01:19:53+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=38
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001350s ]
+SQL: SELECT * FROM `district` WHERE ( upid=38 )  [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2017-04-13T01:19:54+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=578
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001036s ]
+SQL: SELECT * FROM `district` WHERE ( upid=578 )  [ RunTime:0.000311s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000858s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000942s ]
+
+[ 2017-04-13T01:19:56+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000964s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001796s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.000635s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.000538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2017-04-13T01:19:57+08:00 ] 127.0.0.1 /index.php/Home/Pay/checkpay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.000628s ]
+SQL: SELECT * FROM `address` WHERE ( id=18 )  [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001063s ]
+
+[ 2017-04-13T08:20:32+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:20:34+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `users` WHERE `username` = 'chenmin'  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:21:41+08:00 ] 127.0.0.1 /index.php/Home/Login/checkname
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:21:44+08:00 ] 127.0.0.1 /index.php/Home/Login/checkpass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users` WHERE `username` = 'ccmm'  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:21:56+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:21:56+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=22 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:22:09+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=59 )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:22:09+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=59 )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-13T08:22:16+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.033002s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.201012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-13T08:22:29+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=1
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `district` WHERE ( upid=1 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:22:30+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=39
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `district` WHERE ( upid=39 )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:22:33+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:22:35+08:00 ] 127.0.0.1 /index.php/Home/Pay/checkpay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `address` WHERE ( id=18 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:31:06+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=33 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:31:06+08:00 ] 127.0.0.1 /index.php/Home/Introduct/checknum
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `goods` WHERE ( id=33 )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:31:17+08:00 ] 127.0.0.1 /index.php/Home/Pay/address?upid=0
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `district` WHERE ( upid=0 )  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:31:19+08:00 ] 127.0.0.1 /index.php/Home/Pay/checkpay
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `address` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `address` WHERE ( id=18 )  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-13T08:55:35+08:00 ] 127.0.0.1 /index.php/Home/Personal/checkename?username=ccmm11
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `users`  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-04-13T12:55:04+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=249&pid=23
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T12:57:58+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=249&pid=23
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T12:58:52+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=249&pid=23
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T14:12:21+08:00 ] 127.0.0.1 /index.php/Home/Introduct/index?id=27
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T14:14:44+08:00 ] 127.0.0.1 /index.php/Home/Introduct/index?id=27
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T14:29:21+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=37&pid=7
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T14:47:26+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=250&pid=23
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+
+[ 2017-04-13T14:50:46+08:00 ] 127.0.0.1 /index.php/Home/Search/index1
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_Count FROM `goods` WHERE ( typeid= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY cprice desc LIMIT 0,16' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods` WHERE ( typeid= ) ORDER BY cprice desc LIMIT 0,16  
+
+[ 2017-04-13T14:50:48+08:00 ] 127.0.0.1 /index.php/Home/Search/index2
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_Count FROM `goods` WHERE ( typeid= ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ORDER BY num desc LIMIT 0,16' at line 1
+ [ SQL语句 ] : SELECT * FROM `goods` WHERE ( typeid= ) ORDER BY num desc LIMIT 0,16  
+
+[ 2017-04-13T14:54:58+08:00 ] 127.0.0.1 /index.php/home/Introduct/index?id=250&pid=23
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and goods.id=articles.goods_id' at line 1
+ [ SQL语句 ] : select goods.*,articles.* from articles,goods where goods.id= and goods.id=articles.goods_id
+

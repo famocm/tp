@@ -1,0 +1,89 @@
+/* ::::: https://s10.mogucdn.com/__/mfp/meili-mgj-cube-base-pc/assets/0.1.4/base-pc-css/index.css,/mfp/meili-mgj-pc-nav/assets/0.1.0/nav.css,/mfp/meili-mgj-pc-sidebar/assets/0.1.0/sidebar.css,/mfp/meili-mgj-search-bar/assets/1.2.8/search-bar/index.css,/newtown/mogu-global/assets/pc/common/im/index.css-315d2d53.css,/mfp/meili-mgj-pc-bottom/assets/0.1.9/bottom.css,/static/template/_neo/vpop/vpop.css$1490862615.css ::::: */
+
+a, body, html { color: rgb(51, 51, 51); }
+body, dd, dl, form, p { margin: 0px; }
+ol, ul { margin: 0px; padding: 0px; list-style: outside none none; }
+body, button, input, select, textarea { font: 12px/1.6 tahoma,arial,sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; margin: 0px; }
+a { text-decoration: none; }
+.clearfix::after { content: "."; display: block; height: 0px; font-size: 0px; clear: both; visibility: hidden; }
+.media_screen_1200 { min-width: 1200px; }
+.mgj_rightbar { position: fixed; height: 100%; z-index: 9999; top: 0px; width: 30px; right: 0px; color: rgb(255, 255, 255); font-size: 12px; background: rgb(32, 32, 32) none repeat scroll 0% 0%; }
+.mgj_rightbar #mgj_rightbar_blank_div { position: relative; top: 0px; right: 0px; height: 10%; width: 30px; }
+.mgj_rightbar .sidebar-item { position: relative; padding: 4px 4px 0px; text-align: center; background: rgb(32, 32, 32) none repeat scroll 0% 0%; }
+.mgj_rightbar .sidebar-item:hover { background-color: rgb(239, 47, 35); margin-top: -1px; }
+.mgj_rightbar .sidebar-item:hover a { border-bottom: 0px none; padding-top: 1px; padding-bottom: 13px; }
+.mgj_rightbar .sidebar-item a { display: block; color: rgb(255, 255, 255); text-align: center; line-height: 15px; border-bottom: 1px solid rgba(221, 221, 221, 0.6); padding-bottom: 12px; }
+.mgj_rightbar .sidebar-item a .num { display: none; width: 20px; height: 20px; border-radius: 30px; color: rgb(255, 255, 255); text-align: center; line-height: 20px; background-color: rgb(239, 47, 35); margin-top: 5px; }
+.mgj_rightbar .sidebar-item a:hover .num { color: rgb(239, 47, 35); background-color: rgb(255, 255, 255); }
+.mgj_rightbar .sidebar-item .s-icon { background-position: -5px center; width: 30px; height: 30px; display: block; }
+.mgj_rightbar .sideBottom { position: absolute; bottom: 10px; width: 30px; }
+.mgj_rightbar .mgj-back2top a, .mgj_rightbar .mgj-my-feedback a { border-bottom: medium none; padding-bottom: 0px; }
+.mgj_rightbar .mgj-back2top { background: rgb(32, 32, 32) none repeat scroll 0% 0%; display: none; cursor: pointer; padding-top: 0px; padding-bottom: 0px; }
+.mgj_rightbar .mgj-back2top a { border-top: 1px solid rgba(221, 221, 221, 0.6); padding-top: 4px; }
+.mgj_rightbar .mgj-back2top.show { display: block; }
+.mgj_rightbar .mgj-back2top:hover { padding-bottom: 0px; background-color: rgb(239, 47, 35); margin-top: 0px; }
+.mgj_rightbar .mgj-back2top:hover a { border-bottom: 0px none; border-top: 0px none; padding-top: 5px; padding-bottom: 0px; }
+.mini .mgj-back2top a { border-top: 1px solid rgb(32, 32, 32); }
+.mgj_rightbar .sidebar-item .s-icon { background-image: url('upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png'); background-repeat: no-repeat; }
+.mgj_rightbar .mgj-my-coupon .s-icon { background-position: -271px -159px; }
+.mgj_rightbar .mgj-my-browserlog .s-icon { background-position: -271px -189px; }
+.mgj_rightbar .mgj-my-wallet .s-icon { background-position: -271px -219px; }
+.mgj_rightbar .mgj-back2top .s-icon { background-position: -270px -279px; }
+.header_mid { position: relative; clear: both; border-bottom: 2px solid rgb(255, 68, 102); }
+.header_mid .wrap::after, .header_mid .wrap::before { content: ""; display: table; }
+.header_mid .wrap::after { clear: both; }
+@media not all, only screen and (min--moz-device-pixel-ratio: 2), not all, not all {
+  .header_mid .logo { background-image: url('idid_ie4tmmdemu4tonjvmuzdambqgqyde_480x180.png'); background-repeat: no-repeat; background-size: auto 90px; }
+}
+@media (max-width: 1212px) {
+  .header_2015 .header_mid .eleven_logo { background-image: url('twelve_logo_960.gif'); }
+  .header_2015 .header_mid .top_nav_search { margin-left: 40px; }
+  .header_2015 .nav_list li { padding: 0px 16px; }
+}
+@media (max-width: 1212px) {
+  .header_2014 .header_mid .eleven_logo { background-image: url('twelve_logo_960.gif'); }
+  .header_2014 .header_mid .top_nav_search { margin-left: 40px; }
+  .header_2014 .nav_list li { padding: 0px 16px; }
+}
+.foot { overflow: hidden; min-height: 180px; margin-top: 0px; padding-top: 50px; padding-bottom: 60px; background: transparent none repeat scroll 0px 0px; }
+.color_666 { color: rgb(102, 102, 102); }
+.color_999 { color: rgb(153, 153, 153); }
+.mgj_footer_helper a:hover, .mgj_footer_mgjinfo a:hover, .mgj_footer_otherlink a:hover { color: rgb(255, 85, 119); }
+.media_screen_1200 .mgj_copyright { width: 1200px; }
+.mgj_copyright { min-height: 180px; font-size: 12px; margin: 0px auto; font-family: "PingFang SC","Times New Roman","Microsoft YaHei","微软雅黑",STXihei,"华文细黑",serif; }
+.mgj_footer_helper { width: 100%; height: 100px; border-bottom: 2px solid rgb(255, 87, 119); }
+.mgj_footer_helper_mod { height: 100px; float: left; width: 25%; }
+.mgj_footer_helper_mod_container { padding-left: 20px; width: 78%; }
+.mgj_footer_helper_title { font-size: 14px; margin-left: 25px; margin-bottom: 10px; height: 25px; line-height: 25px; overflow: hidden; }
+.mgj_footer_helper_item { float: left; display: inline-block; width: 80px; height: 20px; line-height: 20px; }
+.mgj_footer_helper_item_last { position: relative; width: 62px; display: inline-block; }
+.mgj_footer_helper_item_last:hover .mgj_footer_helper_quoer_code { display: block; }
+.mgj_footer_helper_quoer_code { position: absolute; display: none; height: 70px; width: 70px; top: 27px; left: -17px; overflow: hidden; }
+.mgj_footer_otherlink { margin-bottom: 8px; line-height: 27px; border-bottom: 1px solid rgb(221, 221, 221); }
+.mgj_footer_otherlink_container { margin: 5px 0px; }
+.mgj_footer_a { display: inline-block; }
+.mgj_footer_b { margin: 0px 5px; font-weight: 400; }
+.mgj_footer_mgjinfo { min-height: 20px; margin-top: 10px; overflow: hidden; }
+.mgj_footer_mgjinfo_item { float: left; display: inline-block; width: 80px; height: 20px; line-height: 20px; }
+.mgj_footer_copyright { margin-bottom: 8px; line-height: 27px; }
+.mgj_footer_copyright a:hover { cursor: pointer; text-decoration: none; }
+/* ::::: https://s10.mogucdn.com/__/mfp/meili-cube-common-slider/assets/0.1.1/CubeCommonSlider/index.css,/mfp/meili-mgj-wall/assets/0.3.3/pc_wall.css$1490690821.css ::::: */
+
+.clearfix::after, .clearfix::before { content: ""; display: table; }
+.clearfix::after { clear: both; }
+.clearfix {  }
+#wall_nav_box .price_choice::after, .sort_nav .price_choice::after { content: ""; position: absolute; right: -20px; }
+.sort_nav .price_choice::after { width: 1px; height: 16px; background: rgb(229, 229, 229) none repeat scroll 0% 0%; top: 50%; margin-top: -8px; }
+.foot { width: 100%; }
+#wall_nav_box .price_choice::after { width: 1px; height: 16px; background: rgb(229, 229, 229) none repeat scroll 0% 0%; top: 50%; margin-top: -8px; }
+/* ::::: https://s10.mogucdn.com/hsstorage/public/pD1dW1pY2315BX8fSRDnyS4.css ::::: */
+
+#body_wrap { background-repeat: repeat-x; background-position: center 0px; background-color: rgb(245, 245, 245); }
+.header_mid { border: 0px solid transparent; }
+.show { display: block; }
+.new-person::after { position: absolute; left: 0px; top: 0px; content: ""; width: 100%; height: 54px; background: transparent -moz-linear-gradient(center top , rgb(208, 121, 19), rgb(203, 47, 38)) repeat scroll 0% 0%; transition: opacity 0.5s ease-out 0s; z-index: 2; opacity: 0; }
+.new-person:hover::after { opacity: 1; }
+.firebugResetStyles { z-index: 2147483646 ! important; top: 0px ! important; left: 0px ! important; display: block ! important; border: 0px none ! important; margin: 0px ! important; padding: 0px ! important; outline: 0px none ! important; min-width: 0px ! important; max-width: none ! important; min-height: 0px ! important; max-height: none ! important; position: fixed ! important; transform: rotate(0deg) ! important; transform-origin: 50% 50% 0px ! important; border-radius: 0px ! important; box-shadow: none ! important; background: transparent none repeat scroll 0% 0% ! important; pointer-events: none ! important; white-space: normal ! important; }
+style.firebugResetStyles { display: none ! important; }
+.firebugResetStyles::before, .firebugResetStyles::after { content: "" ! important; }

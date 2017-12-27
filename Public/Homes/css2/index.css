@@ -1,0 +1,257 @@
+/*设置页面共用样式*/
+*{margin:0;padding:0;list-style:none;}
+a{text-decoration:none;color:#666;font-size:13px;}
+body{
+	font-size:15px;
+	color:#000;
+	background:#f6f6f6;
+	font-family:'微软雅黑','宋体','楷体',sans-serif;
+}
+.fl{float:left;}
+.fr{float:right;}
+.cl{clear:both;}
+.mb10{clear:both;height:10px;}
+.mb30{clear:both;height:30px;}
+.hide{display:none;}
+.select{color:red;}
+
+/*主体区域结束*/
+/*页面尾部*/
+#footerdd{
+	width:100%;
+	background:#eaeaea;
+}
+.mod_service{
+	width:1190px;
+	height:50px;
+	margin:0 auto;
+	border-top:1px solid #dedede;
+	padding:30px 0px;
+}
+.mod_service_inner{
+	width:1190px;
+	height:42px;
+}
+.mod_service_inner ul li{
+	width:297px;
+	height:42px;
+	float:left;
+	position:relative;
+}
+.mode_service_tit{
+	float:left;
+	width:36px;
+	height:42px;
+}
+.duo{
+	background:url(../images/duokuaihaosheng.jpg) 0px 0px;
+}
+.kuai{
+	background:url(../images/duokuaihaosheng.jpg) 0px -43px;
+}
+.hao{
+	background:url(../images/duokuaihaosheng.jpg) 0px -85px;
+}
+.sheng{
+	background:url(../images/duokuaihaosheng.jpg) 0px -128px;
+}
+.mod_service_txt{
+	float:left;
+	display:block;
+    overflow: hidden;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+    position:absolute;
+    left:40px;
+    top:0px;
+}
+.mode-help{
+	width:1190px;
+	height:200px;
+	padding:20px 0px;
+	margin:0 auto;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+.mode-help-inner{
+	width:1190px;
+	height:160px;
+	padding:20px 0px;
+}
+.mode-help-nav{
+	width:198px;
+	height:159px;
+	float:left;
+}
+.mode-help-nav ul li a:hover{
+	color:#c81623;
+}
+.mod_help_nav_tit{
+	margin-bottom: 5px;
+    font-size: 14px;
+}
+.mode-help-cover{
+	width:200px;
+	height:150px;
+	background:url(../images/footerdd.jpg);
+}
+.mode-help-cover-tit{
+	margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+.mod_help_cover_con{
+	width:180px;
+	padding:0px 10px;
+}
+.mod_help_cover_con p{
+	font-size:13px;
+	color:#666;
+}
+.mod_help_cover_more{
+	text-align:right;
+}
+.mod_help_cover_more a:hover{
+	color:#c81623;
+}
+/*modehelp结束*/
+.mod_copyright{
+	width:1190px;
+	margin:0 auto;
+}
+.mod_copyright_inner{
+	padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+.mod_copyright_links{
+	width:1190px;
+	height:18px;
+}
+.mod_copyright_split{
+	margin:0px 6px;
+}
+.mod_copyright_links a:hover{
+	color:#c81623;
+}
+.mod_copyright_info{
+	width:1190px;
+	margin:0 auto;
+	text-align:center;
+	padding: 10px 0;
+    line-height: 22px;
+    color: #999;
+}
+.mod_copyright_info p{
+	width:1190px;
+	height:22px;
+	text-align:center;
+}
+#mod_copyright_auth{
+	width:1190px;
+	height:40px;
+	margin-top:10px;
+}
+.mod_copyright_auth_ico{
+	display: inline-block;
+    margin: 0 3px;
+    width: 103px;
+    height: 32px;
+}
+.ico1{
+	background:url(../images/footerdd.jpg) 0px -150px;
+}
+.ico2{
+	background:url(../images/footerdd.jpg) -102px -150px;
+}
+.ico3{
+	background:url(../images/footerdd.jpg) 0px -185px;
+}
+.ico4{
+	background:url(../images/footerdd.jpg) -102px -185px;
+}
+.ico5{
+	background:url(../images/footerdd.jpg) 0px -220px;
+}
+.ico6{
+	background:url(../images/footerdd.jpg) -102px -220px;
+}
+/*footerdd结束*/
+.fixLeft{
+	width:32px;
+	height:504px;
+	margin:0 auto;
+	position:fixed;
+	left:2px;
+	top:100px;
+	display:none;
+}
+.fixLeft ul li{
+	width:30px;
+	height:45px;
+	text-align:center;
+	margin-bottom:1px;
+	background:#a8a8a8;
+}
+.fixLeft ul li:nth-child(6){
+	line-height:45px;
+}
+.fixLeft ul li:nth-last-child(3){
+	line-height:45px;
+}
+.fixLeft ul li a{
+	color:#fff;
+}
+.fixTop{
+	position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid #f10214;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    display:none;
+}
+.fixTop-m{
+	width:1190px;
+	margin:0 auto;
+}
+.fixToplogo{
+	width:125px;
+	height:40px;
+	margin-top:5px;
+}
+.fixTopsearch{
+	width:650px;
+	margin-left:100px;
+	position:relative;
+}
+.fixTopsearch input{
+	outline:0;
+	border:0;
+	width:550px;
+	height:33px;
+	position:absolute;
+	top:3px;
+	background: #efefef;
+}
+.fixTopsearch button{
+	outline:0;
+	border:0;
+	height:33px;
+	background:red;
+	cursor: pointer;
+	position:absolute;
+	right:53px;
+	top:3px;
+}
+.fixTopsearch button img{
+	width:100%;
+	height:100%;
+}

@@ -1,0 +1,1 @@
+a:8:{i:0;s:2:"id";i:1;s:7:"picname";i:2;s:8:"describe";i:3;s:7:"sponspr";i:4;s:7:"addtime";i:5;s:6:"status";s:3:"_pk";s:2:"id";s:5:"_type";a:6:{s:2:"id";s:7:"int(11)";s:7:"picname";s:12:"varchar(255)";s:8:"describe";s:12:"varchar(255)";s:7:"sponspr";s:12:"varchar(255)";s:7:"addtime";s:7:"int(11)";s:6:"status";s:10:"tinyint(1)";}}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>订单管理</title>
+
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/orstyle.css" rel="stylesheet" type="text/css">
+
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon">
+		<link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Homes/css2/index.css">
+		<link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<!--头 -->
+		<include file="Public/phead"/>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-order">
+
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">订单管理</strong> / <small>Order</small></div>
+						</div>
+						<hr/>
+
+						<div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+
+							<ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs">
+								<li class="am-active"><a href="#tab1">所有订单</a></li>
+								<!-- <li><a href="#tab2">待付款</a></li> -->
+								<li><a href="#tab3">待发货</a></li>
+								<li><a href="#tab4">待收货</a></li>
+								<li><a href="#tab5">待评价</a></li>
+							</ul>
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner">单价</td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">数量</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">商品操作</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner">交易状态</td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div class="order-list">
+											
+											<!--交易成功-->
+											<foreach name="list" item="row">
+											<div class="order-status5">
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:;">{$row['order_code']}</a></div>
+													<span>成交时间：{$row['addtime']|date="Y-m-d",###}</span>
+													<!--    <em>店铺：小桔灯</em>-->
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														<ul class="item-list">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a href="__MODULE__/Introduct/index?id={$row['goods_id']}" class="J_MakePoint">
+																		<img src="{$row['picname']}" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a href="#">
+																			<p>{$row['name']}</p>
+																			<p class="info-little">颜色：{$row['color']}
+																				<br/>大小：{$row['size']} </p>
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	¥:{$row['price']}
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	<span>×</span>{$row['num']}
+																</div>
+															</li>
+															<li class="td td-operation">
+																<div class="item-operation">
+																	
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="order-right">
+														<li class="td td-amount">
+															<div class="item-amount">
+																合计：{$row['total']}
+																<!-- <p>含运费：<span>10.00</span></p> -->
+															</div>
+														</li>
+														<div class="move-right">
+															<li class="td td-status">
+																<div class="item-status">
+																	<p class="Mystatus">
+																	  <if condition="$row.status eq '1'">新订单</if>
+													                  <if condition="$row.status eq '2'">已发货</if>
+													                  <if condition="$row.status eq '3'">已收货</if>
+													                  <if condition="$row.status eq '4'">已评价</if>
+																	</p>
+																	<!-- <p class="order-info"></p>
+																	<p class="order-info"></p> -->
+																</div>
+															</li>
+															<li class="td td-change">
+																<div class="am-btn am-btn-danger anniu">
+																	删除订单</div>
+															</li>
+														</div>
+													</div>
+												</div>
+											</div>
+											</foreach>
+										</div>
+									</div>
+									{$pageinfo}
+								</div>
+
+							
+								<div class="am-tab-panel am-fade" id="tab3">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner">单价</td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">数量</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">商品操作</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner">交易状态</td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div class="order-list">
+										<foreach name="list1" item="rows">
+											<div class="order-status2">
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:;">{$rows['order_code']}</a></div>
+													<span>成交时间：{$rows['addtime']|date="Y-m-d",###}</span>
+													    <!-- <em>店铺：小桔灯</em> -->
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														<ul class="item-list">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a href="#" class="J_MakePoint">
+																		<img src="{$rows['picname']}" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a href="#">
+																			<p>{$rows['goods']}</p>
+																			<p class="info-little">颜色 ：{$rows['color']}
+																				<br/>大小 ：{$rows['size']} </p>
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	¥:{$rows['price']}
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	<span>×</span>{$rows['num']}
+																</div>
+															</li>
+															<li class="td td-operation">
+																<div class="item-operation">
+																	<a href="refund.html">退款</a>
+																</div>
+															</li>
+														</ul>
+
+														
+
+														
+													</div>
+													<div class="order-right">
+														<li class="td td-amount">
+															<div class="item-amount">
+																合计：{$rows['total']}
+																<!-- <p>含运费：<span>10.00</span></p> -->
+															</div>
+														</li>
+														<div class="move-right">
+															<li class="td td-status">
+																<div class="item-status">
+																	<p class="Mystatus">买家已付款</p>
+																	<!-- <p class="order-info"><a href="orderinfo.html">订单详情</a></p> -->
+																</div>
+															</li>
+															<li class="td td-change">
+																<div class="am-btn am-btn-danger anniu">
+																	<a href="__MODULE__/Order/remind?id={$rows['id']}" style="color:white;">提醒发货</a></div>
+															</li>
+														</div>
+													</div>
+												</div>
+											</div>
+											</foreach>
+										</div>
+									</div>
+									<!-- {$pageinfo} -->
+								</div>
+
+								<div class="am-tab-panel am-fade" id="tab4">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner">单价</td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">数量</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">商品操作</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner">交易状态</td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div class="order-list">
+										<foreach name="list2" item="cc">
+											<div class="order-status3">
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:;">{$cc['order_code']}</a></div>
+													<span>成交时间：{$cc['addtime']|date="Y-m-d",###}</span>
+													<!--    <em>店铺：小桔灯</em>-->
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														<ul class="item-list">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a href="#" class="J_MakePoint">
+																		<img src="{$cc['picname']}" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a href="#">
+																			<p>{$cc['goods']}</p>
+																			<p class="info-little">颜色 ：{$cc['color']}
+																				<br/>大小 ：{$cc['size']} </p>
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	¥:{$cc['price']}
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	<span>×</span>{$cc['num']}
+																</div>
+															</li>
+															<li class="td td-operation">
+																<div class="item-operation">
+																	<a href="refund.html">退款/退货</a>
+																</div>
+															</li>
+														</ul>
+
+														
+													</div>
+													<div class="order-right">
+														<li class="td td-amount">
+															<div class="item-amount">
+																合计：{$cc['total']}
+																<!-- <p>含运费：<span>10.00</span></p> -->
+															</div>
+														</li>
+														<div class="move-right">
+															<li class="td td-status">
+																<div class="item-status">
+																	<p class="Mystatus">卖家已发货</p>
+																	<!-- <p class="order-info"><a href="orderinfo.html">订单详情</a></p>
+																	<p class="order-info"><a href="logistics.html">查看物流</a></p>
+																	<p class="order-info"><a href="#">延长收货</a></p> -->
+																</div>
+															</li>
+															<li class="td td-change">
+																<div class="am-btn am-btn-danger anniu">
+																	<a href="__MODULE__/Order/confirm?id={$cc['order_id']}" style="color:white;">确认收货</a></div>
+															</li>
+														</div>
+													</div>
+												</div>
+											</div>
+											</foreach>
+										</div>
+									</div>
+								</div>
+
+								<div class="am-tab-panel am-fade" id="tab5">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner">单价</td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">数量</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">商品操作</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner">交易状态</td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div class="order-list">
+											<!--不同状态的订单	-->
+										<volist name="list3" id="shou">
+										<div class="order-status4">
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:;">{$shou['order_code']}</a></div>
+													<span>成交时间：{$shou['addtime']|date="Y-m-d",###}</span>
+
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														<ul class="item-list">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a href="#" class="J_MakePoint">
+																		<img src="__ROOT__{$shou['picname']}" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a href="#">
+																			<p>{$shou['name']}</p>
+																			<p class="info-little">颜色：{$shou['color']}
+																				<br/>大小：{$shou['size']} </p>
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	￥<span>{$shou['price']}</span>
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	<span>{$shou['num']}</span>
+																</div>
+															</li>
+															<li class="td td-operation">
+																<div class="item-operation">
+																	<a href="refund.html">待评价</a>
+																</div>
+															</li>
+														</ul>
+
+													</div>
+													<div class="order-right">
+														<li class="td td-amount">
+															<div class="item-amount">
+																合计：{$shou['total']}
+																<!-- <p>含运费：<span>10.00</span></p> -->
+															</div>
+														</li>
+														<div class="move-right">
+															<li class="td td-status">
+																<div class="item-status">
+																	<p class="Mystatus">交易成功</p>
+																	<p class="order-info"><a href="orderinfo.html">订单详情</a></p>
+																	<p class="order-info"><a href="logistics.html">查看物流</a></p>
+																</div>
+															</li>
+															<li class="td td-change">
+																<a href="__URL__/commentlist?id={$shou['id']}&orders_id={$shou['order_id']}">
+																	<div class="am-btn am-btn-danger anniu">
+																		评价商品</div>
+																</a>
+															</li>
+														</div>
+													</div>
+												</div>
+											</div>
+											</volist>
+											
+										
+
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				<include file="Public/pfooter"/>
+			</div>
+			<aside class="menu">
+				<include file="Public/pleft"/>
+			</aside>
+		</div>
+
+	</body>
+
+</html>

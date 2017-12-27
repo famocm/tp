@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>个人中心</title>
+
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/systyle.css" rel="stylesheet" type="text/css">
+		<link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon">
+		<link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Homes/css2/index.css">
+		<link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--头 -->
+		<include file="Public/phead"/>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="wrap-left">
+						<div class="wrap-list">
+							<div class="m-user">
+								<!--个人信息 -->
+								<div class="m-bg"></div>
+								<div class="m-userinfo">
+								<foreach name="list" item="row">
+									<div class="m-baseinfo">
+										<a href="information.html">
+										<if condition="$row.pic eq null"><img src="__PUBLIC__/Homes/images/no-img_mid_.jpg " /><else/>
+										<img class="am-circle am-img-thumbnail" src="{$row['pic']}" alt="" /></if>
+										</a>
+										<em class="s-name">{$row['username']}<if condition="$row.status eq 1"><else/><span class="vip1"></span></if>
+										</em>
+										<div class="s-prestige am-btn am-round"></div>
+											<if condition="$row.status eq 1"><span>普通会员</span><else/><span style="color:gold;">黄金会员</span></if>
+									</div>
+									<div class="m-right">
+										<div class="m-new">
+											<a href="__MODULE__/Personal/information">修改个人信息</a>
+										</div>
+										<div class="m-address">
+											<a href="__MODULE__/Personal/address?id={$Think.session.id2}" class="i-trigger">我的收货地址</a>
+										</div>
+									</div>
+								</foreach>
+								</div>
+
+							
+							</div>
+							<div class="box-container-bottom"></div>
+
+							<!--订单 -->
+							<div class="m-order">
+								<div class="s-bar">
+									<i class="s-icon"></i>我的订单
+									<a class="i-load-more-item-shadow" href="order.html">全部订单</a>
+								</div>
+								<ul>
+									<li><a href="order.html"><i><img src="__PUBLIC__/Homes/images/pay.png"/></i><span>待付款</span></a></li>
+									<li><a href="order.html"><i><img src="__PUBLIC__/Homes/images/send.png"/></i><span>待发货<!-- <em class="m-num">1</em> --></span></a></li>
+									<li><a href="order.html"><i><img src="__PUBLIC__/Homes/images/receive.png"/></i><span>待收货</span></a></li>
+									<li><a href="order.html"><i><img src="__PUBLIC__/Homes/images/comment.png"/></i><span>待评价<!-- <em class="m-num">3</em> --></span></a></li>
+									<li><a href="change.html"><i><img src="__PUBLIC__/Homes/images/refund.png"/></i><span>退换货</span></a></li>
+								</ul>
+							</div>
+							<!--九宫格-->
+							<div class="user-patternIcon">
+								<div class="s-bar">
+									<i class="s-icon"></i>我的常用
+								</div>
+								<ul>
+
+									<a href="__PUBLIC__/Homes/home/shopcart.html"><li class="am-u-sm-4"><i class="am-icon-shopping-basket am-icon-md"></i><img src="__PUBLIC__/Homes/images/iconbig.png"/><p>购物车</p></li></a>
+									<a href="collection.html"><li class="am-u-sm-4"><i class="am-icon-heart am-icon-md"></i><img src="__PUBLIC__/Homes/images/iconsmall1.png"/><p>我的收藏</p></li></a>
+									<a href="__PUBLIC__/Homes/home/home.html"><li class="am-u-sm-4"><i class="am-icon-gift am-icon-md"></i><img src="__PUBLIC__/Homes/images/iconsmall0.png"/><p>为你推荐</p></li></a>
+									<a href="comment.html"><li class="am-u-sm-4"><i class="am-icon-pencil am-icon-md"></i><img src="__PUBLIC__/Homes/images/iconsmall3.png"/><p>好评宝贝</p></li></a>
+									<a href="foot.html"><li class="am-u-sm-4"><i class="am-icon-clock-o am-icon-md"></i><img src="__PUBLIC__/Homes/images/iconsmall2.png"/><p>我的足迹</p></li></a>                                                                        
+								</ul>
+							</div>
+						
+							<!--收藏夹 -->
+							<div class="you-like">
+								<div class="s-bar">我的收藏
+									<!-- <a class="am-badge am-badge-danger am-round">降价</a> -->
+									<a class="am-badge am-badge-danger am-round">热卖</a>
+									<!-- <a class="i-load-more-item-shadow" href="#"><i class="am-icon-refresh am-icon-fw"></i>换一组</a> -->
+								</div>
+								<div class="s-content">
+									<foreach name="list1" item="dnf">
+									<div class="s-item-wrap">
+										<div class="s-item">
+
+											<div class="s-pic">
+												<a href="#" class="s-pic-link">
+													<img src="{$dnf['picname']}" alt="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰" class="s-pic-img s-guess-item-img">
+												</a>
+											</div>
+											<div class="s-price-box">
+												<span class="s-price"><em class="s-price-sign">¥</em><em class="s-value">{$dnf['price']}</em></span>
+												
+
+											</div>
+											<div class="s-title"><a href="#" title="包邮s925纯银项链女吊坠短款锁骨链颈链日韩猫咪银饰简约夏配饰">{$dnf['goods']}</a></div>
+											<div class="s-extra-box">
+											</div>
+										</div>
+									</div>
+									</foreach>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wrap-right">
+
+						<!-- 日历-->
+						<div class="day-list">
+							<div class="s-bar">
+								<a class="i-history-trigger s-icon" href="#"></a>我的日历
+								<a class="i-setting-trigger s-icon" href="#"></a>
+							</div>
+							<div class="s-care s-care-noweather">
+								<div class="s-date">
+									<em>{$Think.session.day2}</em>
+									<!-- <span>{$Think.session.week2}</span> -->
+									<span>{$Think.session.year2}.{$Think.session.mounth2}</span>
+								</div>
+							</div>
+						</div>
+						<!--新品 -->
+						<div class="new-goods">
+							<div class="s-bar">
+								<i class="s-icon"></i>购物车中商品
+								<!-- <a class="i-load-more-item-shadow">15款新品</a> -->
+							</div>
+							<!-- <div class="new-goods-info">
+								<a class="shop-info" href="#" target="_blank">
+									<div class="face-img-panel">
+										<img src="__PUBLIC__/Homes/images/imgsearch1.jpg" alt="">
+									</div>
+									<span class="new-goods-num ">4</span>
+									<span class="shop-title">剥壳松子</span>
+								</a>
+								<a class="follow " target="_blank">关注</a>
+							</div> -->
+						</div>
+
+						<!--热卖推荐 -->
+						<volist name="Think.session.s" id="goods">
+						<div class="new-goods">
+							<!-- <div class="s-bar">
+								<i class="s-icon"></i>热卖推荐
+							</div> -->
+
+							<div class="new-goods-info">
+								<a class="shop-info" href="__MODULE__/Introduct/index?id={$goods['id']}&pid={$goods['typeid']}" target="_blank">
+									<div >
+										<img src="{$goods['picname']}" alt="">
+									</div>
+                                    <span class="one-hot-goods">{$goods['cprice']}</span>
+								</a>
+							</div>
+						</div>
+						</volist>
+					</div>
+				</div>
+				<!--底部-->
+				<include file="Public/pfooter"/>
+
+			</div>
+
+			<aside class="menu">
+				<include file="Public/pleft"/>
+
+			</aside>
+		</div>
+	</body>
+
+</html>

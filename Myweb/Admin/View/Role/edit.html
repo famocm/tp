@@ -1,0 +1,39 @@
+<extend name="Public:public"/>
+<block name="roleedit">
+	<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>角色修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/update" method="post"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">角色名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="name" value="{$info['name']}"/> 
+       </div> 
+      </div>
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">角色描述</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="descr" value="{$info['descr']}"/> 
+       </div> 
+      </div>
+      
+     <div class="mws-button-row"> 
+      <input type="hidden" name="id" value="{$info['id']}">
+      <input value="修改" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+	角色修改
+</block>

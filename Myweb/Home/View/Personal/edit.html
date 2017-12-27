@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0" /> 
+  <title>地址管理</title> 
+  <link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" /> 
+  <link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" /> 
+  <link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css" /> 
+  <link href="__PUBLIC__/Homes/css/addstyle.css" rel="stylesheet" type="text/css" /> 
+  <script src="__PUBLIC__/Homes/js/jquery-1.8.3.min.js"></script> 
+  <link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon" /> 
+  <link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" /> 
+  <link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet" /> 
+ </head> 
+ <body> 
+  <!--头 --> 
+  <include file="Public/phead" /> 
+  <div class="center"> 
+   <div class="col-main"> 
+    <div class="main-wrap"> 
+     <div class="user-address"> 
+      <!--标题 --> 
+      <div class="am-cf am-padding"> 
+       <div class="am-fl am-cf">
+        <strong class="am-text-danger am-text-lg">地址管理</strong>
+       </div> 
+      </div> 
+      <div ></div>
+      <hr />    
+      <!--例子--> 
+      <div class="am-modal am-modal-no-btn" style="background-color: red"  id="doc-modal-1"> 
+       <div class="add-dress"> 
+        <hr /> 
+        <div class="am-u-md-12 am-u-lg-8"  style="margin-top: 20px;">
+         <form action="__MODULE__/Personal/update" method="post" class="am-form am-form-horizontal"> 
+          <div class="am-form-group"> 
+           <label for="user-name" class="am-form-label">收货人</label> 
+           <div class="am-form-content"> 
+            <input type="text" name="name" value="{$list['name']}"  placeholder="收货人" /><span></span>
+           </div> 
+          </div> 
+          <div class="am-form-group"> 
+           <label for="user-phone"  class="am-form-label">手机号码</label> 
+           <div class="am-form-content"> 
+            <input name="phone" value="{$list['phone']}"  placeholder="手机号必填" type="text" /><span></span> 
+           </div> 
+          </div> 
+          <div class="am-form-group"> 
+           <label for="user-phone"  class="am-form-label">邮编</label> 
+           <div class="am-form-content"> 
+            <input id="user-phone" value="{$list['code']}" name="code"  type="text" /> <span></span>
+           </div> 
+          </div> 
+          <div class="am-form-group"> 
+           <label for="user-address"  class="am-form-label">所在地</label> 
+           <div class="am-form-content address"> 
+            <select   id="cid" style="width: 100px">
+               <option value="">--请选择--</option> 
+            </select> 
+            
+           </div> 
+          </div> 
+          <div class="am-form-group"> 
+           <label for="user-intro" class="am-form-label">详细地址</label> 
+           <div class="am-form-content"> 
+            <textarea class="" name="street" rows="3" id="user-intro" placeholder="输入详细地址">{$list['street']}</textarea> 
+            <small>100字以内写出你的详细地址...</small> 
+           </div> 
+          </div> 
+          <input type="hidden" name="address" value="">
+          <input type="hidden" name="id" value="{$list['id']}">
+          <div class="am-form-group"> 
+           <div class="am-u-sm-9 am-u-sm-push-3" > 
+            <input type="submit" id="ss" value="确认地址" style="width: 100px;height: 35px"> 
+           </div> 
+          </div> 
+         </form> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <script type="text/javascript">
+						$(document).ready(function() {							
+							$(".new-option-r").click(function() {
+								$(this).parent('.user-addresslist').addClass("defaultAddr").siblings().removeClass("defaultAddr");
+							});
+							
+							var $ww = $(window).width();
+							if($ww>640) {
+								$("#doc-modal-1").removeClass("am-modal am-modal-no-btn")
+							}
+							
+						})
+
+          $.ajax({
+              'url':'__MODULE__/Personal/addresss',
+              'type':'get',
+              'data':{upid:0},
+              'dataType':'json',
+              success:
+              function(data){
+                // alert(data);
+                //遍历data
+                for(var i=0;i<data.length;i++){
+                  // alert(data[i].name);
+                  //把遍历出来的数据添加到下拉选项里
+                  var info='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+                  // alert(info);
+                  //把带有数据的下拉选项添加到select元素里
+                  $("#cid").append(info);
+                }
+                
+              },
+              error:
+              function(){
+                alert('Ajax响应失败');
+              }
+            })
+
+            //其他级别
+            $("select").live('change',function(){
+              // alert('ssss');
+              //获取父级id 当做附加参数
+              o=$(this);
+              //清除
+              o.nextAll("select").remove();
+              id=o.val();
+              // alert(id);
+              //ajax
+              $.ajax({
+                'url':'__MODULE__/Personal/addresss',
+                'type':'get',
+                'data':{upid:id},
+                'dataType':'json',
+                success:
+                function(data){
+                  //创建select
+                  select=$("<select style='width:100px'></select>");
+                  // alert(data);
+                  if(data.length>0){
+                  //遍历
+                    for(var i=0;i<data.length;i++){
+                      //把遍历出来数据添加到option
+                      info='<option value="'+data[i].id+'">'+data[i].name+'</option>';
+                      // alert(info);
+                      // $("#mid").append(info);
+                      //把当前info数据添加到创建的select
+                      select.append(info);
+                      
+                    }
+                    //把带有数据的select 追加
+                    o.after(select);
+                  
+                  }
+                }
+
+
+              })
+            })
+
+            //阻止表单提交
+            CNAME=false;
+            CPHONE=false;
+            CCODE=false;
+            $("form").submit(function(){
+              if(CNAME&&CPHONE&&CCODE){
+                return true;
+              }else{
+                return false;
+              }
+            })
+            //判断用户名
+            $("input[name='name']").blur(function(){
+              var name=$(this).val();
+              if(name==''){
+                $(this).next().html('请填写收货人').css('color','#FA97BE');
+                CNAME=false;
+              }else{
+                $(this).next().empty();
+                CNAME=true;
+              }
+            })
+            //判断手机号码
+            $("input[name='phone']").blur(function(){
+              // alert('ss');
+              var phone=$(this).val();
+              if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(phone))){
+                $(this).next().html('请输入正确的手机号码').css('color','#FA97BE');
+                CPHONE=false;
+              }else{
+                $(this).next().empty();
+                CPHONE=true;
+              }
+            })
+            
+            //判断邮编
+            $("input[name='code']").blur(function(){
+              var code=$(this).val();
+              if(!(/^[1-9][0-9]{5}$/.test(code))){
+                $(this).next().html('请输入正确的邮编').css('color','#FA97BE');
+                CCODE=false;
+              }else{
+                $(this).next().empty();
+                CCODE=true;
+              }
+            })
+
+            //获取城市级联地址信息
+            $("#ss").click(function(){
+              // alert('ss');
+              arr=[];
+              $("select").each(function(){
+                //获取选中地址的value值
+                v=$(this).find("option:selected").html();
+                arr.push(v);
+                // alert();
+              })
+              // alert(arr);
+              //给隐藏域赋值
+              $("input[name='address']").val(arr);
+            })
+            
+					</script> 
+     <div class="clear"></div> 
+    </div> 
+    <!--底部--> 
+    <include file="Public/pfooter" /> 
+   </div> 
+   <aside class="menu"> 
+    <include file="Public/pleft" /> 
+   </aside> 
+  </div>  
+ </body>
+</html>

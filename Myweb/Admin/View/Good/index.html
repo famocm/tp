@@ -1,0 +1,145 @@
+<extend name="Public:public"/>
+<block name="goodindex">
+    <html>
+ <head></head>
+ <script type="text/javascript" src="__PUBLIC__/Admins/js/jquery-1.8.3.min.js"></script>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icon-table"></i> 商品列表页</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+    <!--  <div id="DataTables_Table_1_length" class="dataTables_length">
+      <label>Show <select size="1" name="DataTables_Table_1_length" aria-controls="DataTables_Table_1"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
+     </div> -->
+     <form action="__URL__/index" method="get">
+     <div class="dataTables_filter" id="DataTables_Table_1_filter" style="text-align:center;">
+      <label>搜索: <input aria-controls="DataTables_Table_1" type="text"  name="goods" value="{$Think.get.goods}"/></label>
+      <input type="submit" value="搜索">
+     </div>
+     </form>
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+      <thead> 
+       <tr role="row">
+       <!-- <th></th> -->
+       <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 60px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending"></th>
+        <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 60px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">商品ID</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 108px;" aria-label="Browser: activate to sort column ascending">商品类别</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Platform(s): activate to sort column ascending">商品名称</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">简介 </th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">价格 </th>
+         <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">促销价</th>
+          <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">颜色 </th>
+           <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">大小 </th>
+            <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1"style="width: 105px;" aria-label="Engine version: activate to sort column ascending">图片名 </th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">状态 </th> 
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 105px;" aria-label="Engine version: activate to sort column ascending">库存 </th>   
+       <!--  <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 135px;" aria-label="Engine version: activate to sort column ascending">购买数量 </th> -->
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 135px;" aria-label="Engine version: activate to sort column ascending">添加时间 </th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 98px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+       </tr> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <foreach name="list" item="row">
+           <tr class="odd"> 
+            <td class="  sorting_1"><input type="checkbox" value="{$row['gid']}"></td> 
+            <td class="  sorting_1">{$row['gid']}</td>
+            <td class="">{$row['cname']}</td>
+            <td class=" ">{$row['goods']}</td> 
+            <td class=" ">{$row['descr']}</td> 
+            <td class=" ">{$row['price']}</td> 
+            <td class=" ">{$row['cprice']}</td> 
+            <td class=" ">{$row['color']}</td> 
+            <td class=" ">{$row['size']}</td> 
+            <td class=" "><img src="{$row['picname']}"></td> 
+            <td class=" "><if condition="$row['status'] eq 1"> 新添加<elseif condition="$row['status'] eq 2"/>在售<else /> 下架</if></td> 
+            <td class=" ">{$row['store']}</td> 
+            <!-- <td class=" ">{$row['num']}</td>  -->
+            <td class=" ">{$row['addtime']|date="Y-m-d",###}</td> 
+            <td class=" "><a href="__URL__/delete/id/{$row['gid']}" class="btn btn-success"><i class="icon-trash"></i></a> <a href="__URL__/edit/id/{$row['gid']}" class="btn btn-info"><i class="icon-wrench"></i></a></td> 
+           </tr>
+        </foreach>
+       <tr>
+          <td colspan="8"><a href="javascript:void(0)" class="alldel">全选</a> | <a href="javascript:void(0)" class="nodel">全不选</a> | <a href="javascript:void(0)" class="fdel">反选</a>----<a href="javascript:void(0)" class="del">删除选中</a></td>
+        </tr>
+      </tbody>
+     </table>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+     </div>
+     <div class="dataTables_paginate paging_full_numbers" id="DataTables_Table_1_paginate">
+        {$pageinfo}
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+ <script type="text/javascript">
+   //全选
+ $(".alldel").click(function(){
+  // alert('sss');
+  $("#DataTables_Table_1").find("tr").each(function(){
+    //获取当前tr的复选框 设置为选中
+    $(this).find(":checkbox").attr("checked",true)
+  })
+ })
+
+ //全不选
+ $(".nodel").click(function(){
+  $("#DataTables_Table_1").find("tr").each(function(){
+    //获取tr下的复选框  设置为不选中
+    $(this).find(":checkbox").attr("checked",false);
+  })
+ })
+
+ //反选
+ $(".fdel").click(function(){
+  $("#DataTables_Table_1").find("tr").each(function(){
+    //判断
+    if($(this).find(":checkbox").attr('checked')){
+      // alert("111");
+      $(this).find(":checkbox").attr("checked",false);
+    }else{
+      // alert("222")
+      $(this).find(":checkbox").attr("checked",true);
+
+    }
+  })
+ })
+
+ //删除
+ $(".del").click(function(){
+  a=[];//存储选中数据的id
+  //遍历所有的复选框
+  $(":checkbox").each(function(){
+    //判断
+    if($(this).attr("checked")){
+      //获取被选中的复选框的id
+      id=$(this).val();
+      //把所有选中的id  存储在数组a
+      a.push(id);
+    }
+
+    // alert(a);
+  })
+
+  s=confirm("你确定删除吗?");
+  if(s){  
+      //Ajax
+      $.get("__URL__/del",{uname:a},function(data){
+        if(data==1){
+          // 清除选中的html样式
+          for(var i=0;i<a.length;i++){
+            $("input[value="+a[i]+"]").parents("tr").remove();
+          }
+          // alert('删除成功')
+        }else{
+          alert(data);
+        }
+      });
+  }
+ })
+ </script>
+</html>
+</block>
+<block name="title">商品列表</block>

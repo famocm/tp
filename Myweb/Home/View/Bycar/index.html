@@ -1,0 +1,270 @@
+<!DOCTYPE html >
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		<title>购物车页面</title>
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="__PUBLIC__/Homes/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="__PUBLIC__/Homes/css/cartstyle.css" rel="stylesheet" type="text/css" />
+		<link href="__PUBLIC__/Homes/css/optstyle.css" rel="stylesheet" type="text/css" />
+		<link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon">
+		<!-- head -->
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+		<link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon">
+		<link href="__PUBLIC__/Homes/basic/css/demo.css" rel="stylesheet" type="text/css" type="text/css"/>
+		<link href="__PUBLIC__/Homes/css/hmstyle.css" rel="stylesheet" type="text/css"/>
+		<link href="__PUBLIC__/Homes/css/skin.css" rel="stylesheet" type="text/css" />
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Homes/css2/index.css">
+		<link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet">
+		<!-- head -->
+
+		
+
+		<script type="text/javascript" src="__PUBLIC__/Homes/js/stepBar.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/Homes/js/jquery.js"></script>
+ 		<script type="text/javascript" src="__PUBLIC__/Homes/js/jquery-1.8.3.min.js"></script>
+
+	</head>
+	<body>
+		<!-- head1 -->
+			<!-- 头部 -->
+			<include file="Public/shead"/>
+			<!-- 头部 -->
+					<br>
+				<div class="clear"></div>
+				<div class="concent">
+					<!-- head22 -->
+					<div class="clear"></div>
+					
+					<div class="clear"></div>
+					<!-- shop1 -->
+					<div class="cart-table-th">
+						<div class="wp">
+							<div class="th th-chk"><div id="J_SelectAll1" class="select-all J_SelectAll"></div></div>
+							<div class="th th-item"><div class="td-inner">商品信息</div></div>
+							<div class="th th-price"><div class="td-inner">单价</div></div>
+							<div class="th th-amount"><div class="td-inner">数量</div></div>
+							<div class="th th-sum"><div class="td-inner">总价</div></div>
+							<div class="th th-op"><div class="td-inner">操作</div></div>
+						</div>
+					</div>
+					<!-- shop2 -->
+					<div class="clear"></div>
+
+					<!-- c -->
+					<volist name="shop" id="row">
+					<tr class="item-list" name="tr">
+						<div class="bundle  bundle-last ">
+							<div class="bundle-hd">
+								<div class="bd-promos">
+									<!-- <div class="bd-has-promo">已享优惠:<span class="bd-has-promo-content">省￥19.50</span>&nbsp;&nbsp;</div> -->
+									<div class="act-promo">
+										
+									</div>
+									<span class="list-change theme-login">编辑</span>
+								</div>
+							</div>
+						</div>
+						<!-- ww -->
+						
+						<div class="bundle-main">
+							<ul class="item-content clearfix">
+								<li class="td td-chk">
+									<div class="cart-checkbox ">
+										<input class="check" id="J_CheckBox_170037950254" name="items[]" value="{$row['id']}" type="checkbox">
+										<label for="J_CheckBox_170037950254"></label>
+									</div>
+								</li>
+								<li class="td td-item">
+									<div class="item-pic">
+										<a href="#" target="_blank" data-title="$row['descr']" class="J_MakePoint" data-point="tbcart.8.12">
+										<img src="__ROOT__{$row['picname']}" class="itempic J_ItemImg"></a>
+									</div>
+									<div class="item-info">
+										<div class="item-basic-info">
+											<a href="#" target="_blank" title="$row['descr']" class="item-title J_MakePoint" data-point="tbcart.8.11">{$row['descr']}</a>
+										</div>
+									</div>
+									
+								</li>
+								<li class="td td-info">
+									<div class="item-props item-props-can">
+										<span class="sku-line">{$row['color']}</span><br>
+										<span class="sku-line">{$row['size']}</span><br>
+										<i class="theme-login am-icon-sort-desc"></i>
+									</div>
+								</li>
+								<li class="td td-price">
+									<div class="item-price price-promo-promo">
+										<div class="price-content">
+											<div class="price-line">
+												<em class="price-original">{$row['price']}</em>
+											</div>
+											<div class="price-line">
+												<em class="J_Price price-now" tabindex="0" id="cprice">{$row['cprice']}</em>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="td td-amount">
+									<div class="amount-wrapper ">
+										<div class="item-amount ">
+											<div class="sl">
+												<!-- <input style="width:25px;height:25px;" name="del" type="button" value="-" /> -->
+												<!-- <input style="width:25px;height:25px;" name="id" type="hidden" value="{$row['id']}" /> -->
+												<!-- <a href="__MODULE__/Bycar/updatee/id/{$row['id']}" class="jian"></a> -->
+												<button style="width:25px;height:25px;" name="{$row['id']}" class="jian"> - </button>
+												<span class="text_box" name="num" style="width:30px;text-align:center;">{$row['num']}</span>
+												<!-- <input style="width:25px;height:25px;" name="add" type="button" value="+" /> -->
+												<!-- <a href="__MODULE__/Bycar/update/id/{$row['id']}" ></a> -->
+												<button style="width:25px;height:25px;" class="jia" name="{$row['id']}"> + </button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="td td-sum">
+									<div class="td-inner" id="total">
+										<em tabindex="0" class="J_ItemSum number" id="tot">{$row['num']*$row['cprice']}</em>
+									</div>
+								</li>
+								<li class="td td-op">
+									<div class="td-inner">
+										<a href="__MODULE__/Bycar/delete/id/{$row['id']}" data-point-url="#" class="delete">删除</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+												<!-- ww -->
+					</tr>
+					</volist>
+
+					<!-- c -->
+					<div class="clear"></div>
+				<if condition="$Think.session.s eq null"><div style="height:300px;font-size:20px;text-align:center;line-height:300px;">购物车还没有商品请先去购物<a href="__MODULE__/Index/index" style="color:red;font-size:12px;">首页</a></div><else/>
+				<div class="float-bar-wrapper">
+					<div id="J_SelectAll2" class="select-all J_SelectAll">
+						<div class="cart-checkbox">
+							<!-- <input class="check-all check" id="J_SelectAllCbx2" name="select-all" value="true" type="checkbox"> -->
+							<label for="J_SelectAllCbx2"></label>
+						</div>
+						<span><a href="javascript:void(0)" class="alldel">全选</a></span>
+					</div>
+					<div class="operations">
+						<a href="javascript:void(0)" hidefocus="true" class="deleteAll">删除</a>
+					</div>
+					<div class="float-bar-right">
+
+						<div class="amount-sum">
+							<a href="__MODULE__/Index/index" id="J_Go" class="submit-btn submit-btn-disabled">
+								<span>继续购物</span></a>
+						</div> 
+						<div class="price-sum">
+							<span class="txt">合计:</span>
+							<strong class="price">¥<em id="J_Total">{$all}</em></strong>
+						</div>
+						<div class="btn-area">
+						<!-- <a href="__MODULE__/Index/index" id="J_Go" class="submit-btn submit-btn-disabled">
+								<span>继续购物</span></a> -->
+							<a href="__MODULE__/Pay/index" id="J_Go" class="submit-btn submit-btn-disabled" aria-label="请注意如果没有选择宝贝，将无法结算">
+								<span>去&nbsp;支&nbsp;付</span></a>
+						</div>
+						
+					</div>
+				</div>
+				</if>	
+					
+					<!-- c -->
+
+				</div>
+				<br>
+				<div class="clear"></div>
+		<!-- 尾部 -->
+		<include file="Public/pfooter"/>
+	</body>
+	<script type="text/javascript">
+	//全选
+	$(".alldel").click(function(){
+	// alert('sss');
+	//设置为选中
+	
+	$(":checkbox").attr("checked",true);
+
+})
+
+	//删除
+	$(".deleteAll").click(function(){
+	a=[];//存储选中数据的id
+	//遍历所有的复选框
+	$(":checkbox").each(function(){
+	//判断
+	if($(this).attr("checked")){
+	  //获取被选中的复选框的id
+	  id=$(this).val();
+	  // alert(id);
+	  //把所有选中的id  存储在数组a
+	  a.push(id);
+	}
+
+	// alert(a);
+	})
+	s=confirm("你确定删除吗?");
+	if(s){  
+	  //Ajax
+	  $.get("__URL__/del",{id:a},function(data){
+	    if(data==1){
+	      // 清除选中的html样式
+	        for(var i=0;i<a.length;i++){
+            	$(".text_box").parent().parent().parent().remove();
+				window.location.reload();//强制刷新
+          	}
+	        // alert(a);
+	      // alert('删除成功');
+	    }else{
+	      alert(data);
+	    }
+	  });
+	}
+ })
+	//减
+	$(".jian").click(function(){
+		// alert('sss');
+		//获取id
+		var id=$(this).attr('name');
+		// alert(id);
+		b=$(this);
+		//Ajax
+		$.get("__MODULE__/Bycar/updatee",{id:id},function(data){
+			// alert(data);
+			// alert(ob.next("input").val());
+			//把响应数据赋值给input value值
+			b.next().html(data['num']);
+			//把响应数据赋值
+			b.parents().parents().next().find('em').html(data['tot']);
+			$('#J_Total').html(data['all']);
+		},'json');
+	})
+
+	//加
+	$(".jia").click(function(){
+		//获取id
+		var id=$(this).attr("name");
+		// alert(id);
+		b=$(this);
+		//Ajax
+		$.get("__MODULE__/Bycar/update",{id:id},function(data){
+			// alert(data);
+			//把响应数据赋值给input value值
+			b.prev().html(data['num']);
+			//把响应数据赋值
+			b.parents().parents().next().find('em').html(data['tot']);
+			$('#J_Total').html(data['all']);
+		},'json')
+	})
+
+	</script>
+</html>

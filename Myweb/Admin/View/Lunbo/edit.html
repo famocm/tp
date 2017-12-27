@@ -1,0 +1,61 @@
+<extend name="Public:public"/>
+<block name="lunboedit">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>轮播修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/update" method="post" enctype="multipart/form-data"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">类名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="name" value="{$info['name']}"/> 
+       </div> 
+      </div> 
+        <div class="mws-form-row"> 
+         <label class="mws-form-label">状态</label> 
+         <div class="mws-form-item"> 
+          <!-- <input class="large" type="text" name="status" value="{$info['status']}"/>  -->
+          <ul class="mws-form-list inline">
+            <li><input name="status" type="radio" value="1" <if condition="$info['status'] eq 1">checked</if>> <label>显示</label></li>
+            <li><input name="status" type="radio" value='2' <if condition="$info['status'] eq 2">checked</if>> <label>不显示</label></li>
+            <!-- <li><input name="status" type="radio" value="3" <if condition="$info['status'] eq 3">checked</if>> <label>下架</label></li> -->
+          </ul>
+         </div> 
+      </div>
+
+      <div class="mws-form-row"> 
+          <label class="mws-form-label">旧图</label> 
+          <div class="mws-form-item"> 
+         <img src="__ROOT__/Public/Uploads/{$info['img']}" width="100px" height="100px">
+         </div> 
+      </div>
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">上传新图</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="file" name="img" /> 
+       </div> 
+      </div>
+
+    
+     
+      
+     <div class="mws-button-row"> 
+      <input type="hidden" value="{$info['id']}" name="id">
+      <input type="hidden" value="{$info['img']}" name="oldimg">
+      <input value="修改" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+  轮播修改
+</block>

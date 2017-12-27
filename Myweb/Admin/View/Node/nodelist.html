@@ -1,0 +1,66 @@
+<extend name="Public:public"/>
+<block name="roleadd1">
+  <html>
+ <head></head>
+ <script type="text/javascript" src="__PUBLIC__/Admins/js/jquery-1.8.3.min.js"></script>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span></span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+   <h1>{$roles['name']}的权限信息</h1> 
+    <form class="mws-form" action="__MODULE__/Node/nodelist" method="post"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label"></label>
+       <foreach name='nodelist' item="vo"> 
+       <div class="mws-form-item"> 
+        <input class="large"  type="checkbox" <if condition="in_array($vo['id'],$pids)">checked</if> value="{$vo['id']}" name="pid[]" />{$vo['name']}
+        <input type="hidden" name="rid" value="{$roles['id']}">
+       </div> 
+       </foreach>
+         <a href="javascript:void(0)" class="alldel">全选</a> 
+
+      </div>
+     <div class="mws-button-row"  style="text-align:center;">
+      <input value="保存" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+   <script type="text/javascript">
+ //  //全选
+ //   $(".alldel").click(function(){
+ //  // alert('sss');
+  // $(".mws-form-row").find("div").each(function(){
+  //   //获取当前div的复选框 设置为选中
+  //   $(this).find(":checkbox").attr("checked",true);
+  // })
+ // })
+   //全选2 toggle方法
+   $(".alldel").toggle(
+      function(){
+        // alert("22");
+         $(".mws-form-row").find("div").each(function(){
+       //获取当前div的复选框 设置为选中
+       $(this).find(":checkbox").attr("checked",true);
+       })
+      },
+      function(){
+        // alert("2333");
+         $(".mws-form-row").find("div").each(function(){
+       //获取当前div的复选框 设置为不选中
+        $(this).find(":checkbox").attr("checked",false);
+       })
+      }
+
+    );
+  </script>
+</html>
+</block>
+<block name="title">
+  角色添加
+</block>

@@ -1,0 +1,68 @@
+<extend name="Public:public"/>
+<block name="rootindex">
+    <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span><i class="icon-table"></i> 管理员列表页</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper" role="grid">
+    <!--  <div id="DataTables_Table_1_length" class="dataTables_length">
+      <label>Show <select size="1" name="DataTables_Table_1_length" aria-controls="DataTables_Table_1"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
+     </div> -->
+     <!-- <form action="__URL__/index" method="get">
+     <div class="dataTables_filter" id="DataTables_Table_1_filter" style="text-align:center;">
+      <label>搜索: <input aria-controls="DataTables_Table_1" type="text"  name="username" value="{$Think.get.username}"/></label>
+      <input type="submit" value="搜索">
+     </div>
+     </form> -->
+     <div id="uid">
+     <table class="mws-datatable-fn mws-table dataTable" id="DataTables_Table_1" aria-describedby="DataTables_Table_1_info"> 
+      <thead> 
+       <tr role="row">
+        <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 160px;" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">ID</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 208px;" aria-label="Browser: activate to sort column ascending">Username</th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 135px;" aria-label="Engine version: activate to sort column ascending">添加时间 </th>
+        <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" style="width: 98px;" aria-label="CSS grade: activate to sort column ascending">操作</th>
+       </tr> 
+      </thead> 
+      <tbody role="alert" aria-live="polite" aria-relevant="all">
+        <foreach name="data" item="row">
+           <tr class="odd"> 
+            <td class="  sorting_1">{$row['id']}</td> 
+            <td class=" ">{$row['username']}</td> 
+            <td class=" ">{$row['addtime']|date="Y-m-d",###}</td> 
+            <td class=" "><a href="__URL__/delete/id/{$row['id']}" class="btn btn-success"><i class="icon-trash"></i></a> <a href="__URL__/edit/id/{$row['id']}" class="btn btn-info"><i class="icon-wrench"></i></a><a href="__URL__/rolelist/id/{$row['id']}" class="btn btn-success">分配角色</a></td> 
+           </tr>
+        </foreach>
+       
+      </tbody>
+     </table>
+     </div>
+     <div class="dataTables_info" id="DataTables_Table_1_info">
+     </div>
+     <div class="dataTables_paginate paging_full_numbers " id="DataTables_Table_1_paginate">
+        <foreach name="pp" item="value">
+          <a href="javascript:void(0)" onclick="page({$value})" style="width:30px;height:30px;line-height:30px;text-align:center;border:1px solid #ccc;display:block;float:left">{$value}</a>
+        </foreach>
+     </div>
+    </div> 
+   </div> 
+  </div>
+ </body>
+ <script type="text/javascript">
+  // alert($);
+  function page(page){
+    //Ajax
+    $.get('__URL__/index',{page:page},function(data){
+      // alert(data);
+      //把接收到的响应数据赋值给div 文本值
+      $("#uid").html(data);
+    });
+  }
+ </script>
+</html>
+</block>
+<block name="title">管理员列表</block>

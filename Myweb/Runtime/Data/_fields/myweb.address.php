@@ -1,0 +1,1 @@
+a:9:{i:0;s:2:"id";i:1;s:7:"address";i:2;s:4:"name";i:3;s:8:"users_id";i:4;s:6:"street";i:5;s:4:"code";i:6;s:5:"phone";s:3:"_pk";s:2:"id";s:5:"_type";a:7:{s:2:"id";s:7:"int(10)";s:7:"address";s:12:"varchar(255)";s:4:"name";s:12:"varchar(255)";s:8:"users_id";s:7:"int(10)";s:6:"street";s:12:"varchar(255)";s:4:"code";s:12:"varchar(255)";s:5:"phone";s:12:"varchar(255)";}}

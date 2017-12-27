@@ -1,0 +1,54 @@
+		<header>
+			<article>
+				<div class="mt-logo">	
+			<div id="header" class="J_sitenav site-top-nav" data-ptp="_head">
+			   <div class="wrap"> 
+			    <a href="__APP__/Home/Index/index" rel="nofollow" class="home fl">时尚街首页</a> 
+			    <ul class="header-top"> 
+			     <li class="s1 show-nologin"> <if condition="$Think.session.username2 eq null"><a rel="nofollow" href="__APP__/Home/Register/index">注册</a><else/><a rel="nofollow" href="">欢迎{$Think.session.username2}回来</a></if> 
+					
+			     </li> 
+			     <li class="s1 show-nologin"> <if condition="$Think.session.username2 eq null"><a rel="nofollow" href="__APP__/Home/Login/login">登录</a><else/><a rel="nofollow" href="__APP__/Home/Login/loginout">退出</a></if> 
+					
+			     </li> 
+			     
+			     <li class="s1 myorder has-line"> <a href="__MODULE__/Personal/order"  class="text display_u" rel="nofollow">我的订单</a> </li> 
+			     <li class="s1 has-line shopping-cart-v2"> <a class="cart-info-wrap" href="__MODULE__/Bycar/index" target="_blank" rel="nofollow"> <span class="cart-info">购物车</span><b id="carnum"><if condition="$Think.session.username2 eq '' "><else />{$Think.session.shopnum}</if></b> </a> <i class="icon-delta"></i> <span class="shopping-cart-loading"></span> 
+			      </li> 
+			     <li class="s1 has-line has-icon custom-item"> <a rel="nofollow" href="__MODULE__/Personal/index" target="_blank">个人中心</a>
+			      </li>  
+			    </ul>
+			   </div>
+			  </div> 
+
+				<!--悬浮搜索框-->
+
+				<div class="nav white">
+					<div class="logoBig">
+						<li><a href="__APP__/Home/Index/index"><img src="__PUBLIC__/Homes/images/fin.jpg" /></a></li>
+					</div>
+
+					<div class="search-bar pr">
+						<a name="index_none_header_sysc" href="#"></a>
+						<form action="__MODULE__/Search/index3" method="get">
+							<input id="searchInput" name="goods" type="text" value="{$Think.get.goods}" autocomplete="off">
+							<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
+						</form>
+					</div>
+				</div>
+					<div class="clear"></div>
+					</div>
+				</div>
+			</article>
+		</header>
+		<div class="nav-table">
+					   <div class="long-title"><span><a href="__MODULE__/Index/index" class="all-goods">首页</a></span></div>
+					   <div class="nav-cont">
+							<ul>
+                                <li class="qc"><a>省钱团购</a></li>
+                                <li class="qc"><a>品质优选</a></li>
+							</ul>
+						    
+						</div>
+			</div>
+			<b class="line"></b>

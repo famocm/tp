@@ -1,0 +1,104 @@
+<extend name="Public:public"/>
+<block name="goodadd">
+	<html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>商品添加</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/insert" method="post" enctype="multipart/form-data"> 
+     <div class="mws-form-inline"> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">商品名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="goods" /> 
+       </div> 
+      </div> 
+
+      <div class="mws-form-row">
+      <label class="mws-form-label">类别</label>
+      <div class="mws-form-item">
+        <select class="large" name="typeid">
+          <option value="0">--请选择--</option>
+          <foreach name="cate" item="row">
+            <option value="{$row['id']}">{$row['name']}</option>
+          </foreach>
+          
+        </select>
+      </div>
+      </div> 
+
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">简介</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="descr"/> 
+       </div> 
+      </div> 
+
+       <div class="mws-form-row"> 
+       <label class="mws-form-label">价格</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="price"/> 
+       </div> 
+      </div> 
+
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">促销价</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="cprice"/> 
+       </div> 
+      </div> 
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">颜色</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="color"/> 
+       </div> 
+      </div> 
+
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">大小</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="size"/> 
+       </div> 
+      </div>
+
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">图片名</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="file" name="picname"/> 
+       </div> 
+      </div>
+      <!-- <div class="mws-form-row">
+      <label class="mws-form-label">状态</label>
+      <div class="mws-form-item clearfix">
+        <ul class="mws-form-list inline">
+          <li><input name="status" type="radio" value="1"> <label>新添加</label></li>
+          <li><input name="status" type="radio" value='2'> <label>在售</label></li>
+          <li><input name="status" type="radio" value="3"> <label>下架</label></li>
+        </ul>
+      </div>
+    </div>
+       -->
+      <div class="mws-form-row"> 
+       <label class="mws-form-label">库存</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="store"/> 
+       </div> 
+      </div>
+     <div class="mws-button-row"> 
+     <center>
+       <input value="添加" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" />
+     </center>
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+	商品添加
+</block>

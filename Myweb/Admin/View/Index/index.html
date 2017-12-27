@@ -1,0 +1,41 @@
+<extend name="Public:public"/>
+<block name="adminindex">
+	<html>
+		<head>
+			<script src="__ROOT__/Public/Admins/js/echarts.js"></script>
+		</head>
+		<body>
+			<div id="main" style="width:1000px;height:500px;margin:10px;margin-left:20px;"></div>
+			<script>
+				// 基于准备好的dom，初始化echarts实例
+		        var myChart = echarts.init(document.getElementById('main'));
+
+		        // 指定图表的配置项和数据
+		        var option = {
+		            title: {
+		                text: '商品类别销量'
+		            },
+		            tooltip: {},
+		            legend: {
+		                data:['销量']
+		            },
+		            xAxis: {
+		                data: ["内衣","鞋子","裤子","家用电器","女装","男装","手机","水果","蔬菜","肉类","零食"]
+		            },
+		            yAxis: {},
+		            series: [{
+		                name: '销量',
+		                type: 'bar',
+		                data: [5,20,36,10,10,20,20,30,40,50,80]
+		            }]
+		        };
+
+		        // 使用刚指定的配置项和数据显示图表。
+		        myChart.setOption(option);
+			</script>
+		</body>
+	</html>
+   <!-- <img src="__PUBLIC__/Admins/b/images/01.jpg" alt="" style="margin-left:300px;margin-top:100px;"> -->
+
+</block>
+<block name="title">后台首页</block>

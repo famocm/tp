@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>验证邮箱</title>
+
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/stepstyle.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="__PUBLIC__/Homes/js/jquery-1.7.2.min.js"></script>
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script src="__PUBLIC__/Homes/js/jquery-1.8.3.min.js"></script> 
+	    <link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon" /> 
+	    <link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" /> 
+	    <link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet" /> 
+	</head>
+
+	<body>
+		<!--头 -->
+		<include file="Public/phead" />
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="am-cf am-padding">
+						<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">绑定邮箱</strong> / <small>Email</small></div>
+					</div>
+					<hr/>
+					<!--进度条-->
+					<div class="m-progress">
+						<div class="m-progress-list">
+							<span class="step-1 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">1<em class="bg"></em></i>
+                                <p class="stage-name">验证邮箱</p>
+                            </span>
+							<span class="step-2 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">2<em class="bg"></em></i>
+                                <p class="stage-name">完成</p>
+                            </span>
+							<span class="u-progress-placeholder"></span>
+						</div>
+						<div class="u-progress-bar total-steps-2">
+							<div class="u-progress-bar-inner"></div>
+						</div>
+					</div>
+					<form class="am-form am-form-horizontal" action="__MODULE__/Personal/doemail">
+						<div class="am-form-group">
+							<label for="user-email" class="am-form-label">换绑定邮箱</label>
+							<div class="am-form-content">
+								<input type="text" id="user-email" placeholder="请输入新的邮箱地址" name="email"><span></span>
+							</div>
+						</div>
+						<!-- <div class="am-form-group code">
+							<label for="user-code" class="am-form-label">验证码</label>
+							<div class="am-form-content">
+								<input type="text" id="user-new-code" placeholder="输入邮箱验证码" style="width:200px;float:left;">
+								<input type="button" style="height:32px;float:left;" id="sendMobileCode" value="获取验证码" name="pcode">
+							</div> -->
+							<!-- <a class="btn" href="javascript:void(0);" onclick="sendMobileCode();" id="sendMobileCode">
+								<div class="am-btn am-btn-danger">验证码</div>
+							</a> -->
+						<!-- </div> -->
+						<div class="info-btn">
+							<input type="submit" value="保存修改" class="am-btn am-btn-danger">
+						</div>
+
+					</form>
+
+				</div>
+				<!--底部-->
+				
+					<include file="Public/pfooter" />
+			</div>
+
+			<aside class="menu">
+				<include file="Public/pleft" />
+
+			</aside>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+	// 阻止表单提交
+    CEMAIL=false;
+    // 给form表单绑定提交时间
+    $("form").submit(function(){
+        if(CEMAIL){
+            return true;
+        }else{
+            return false;
+        }
+    })
+
+    
+     //检测邮箱
+    $("input[name='email']").blur(function(){
+        //获取邮箱值
+        var email=$(this).val();
+        // alert(email);
+        if(email==''){
+            // alert('sss');
+            $(this).next().empty();
+            // $(this).css('border','1px solid #dddddd');
+        }else{
+           //正则
+            var reg=/^\w+@\w+\.(com|cn|com\.cn|net)$/;
+            if(!reg.test(email)){
+                $(this).next().html('邮箱格式错误');
+                CEMAIL=false;
+            }else{
+                //Ajax
+                s=$(this);
+                $.post('__URL__/checkemail',{email:email},function(data){
+                    if(data==1){
+                        s.next().html('邮箱已存在').css('color','red');
+                        CEMAIL=false;
+                    }else{
+                        // s.css('border','1px solid #dddddd');
+                        // s.next().html("√").css('color','green');
+                        CEMAIL=true;
+                    }
+                })
+            }  
+        }
+          
+    })
+
+	</script>
+</html>

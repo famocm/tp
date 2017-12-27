@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>实名认证</title>
+
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/stepstyle.css" rel="stylesheet" type="text/css">
+
+		<script type="text/javascript" src="__PUBLIC__/Homes/js/jquery-1.7.2.min.js"></script>
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+
+		<link href="__PUBLIC__/Homes/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="__PUBLIC__/Homes/css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="__PUBLIC__/Homes/AmazeUI-2.4.2/assets/js/amazeui.js" type="text/javascript"></script>
+		<link href="__PUBLIC__/Homes/css1/index_002.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/Homes/css2/index.css">
+		<link rel="Shortcut Icon" href="__PUBLIC__/Homes/images/icon.jpg" type="image/x-icon">
+		<link media="all" href="__PUBLIC__/Homes/css/index.css" type="text/css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<!--头 -->
+		<!--头 -->
+		<include file="Public/phead"/>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="am-cf am-padding">
+						<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">实名认证</strong> / <small>Real&nbsp;authentication</small></div>
+					</div>
+					<hr/>
+					<!--进度条-->
+					<div class="m-progress">
+						<div class="m-progress-list">
+							<span class="step-1 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">1<em class="bg"></em></i>
+                                <p class="stage-name">实名认证</p>
+                            </span>
+							<span class="step-2 step">
+                                <em class="u-progress-stage-bg"></em>
+                                <i class="u-stage-icon-inner">2<em class="bg"></em></i>
+                                <p class="stage-name">完成</p>
+                            </span>
+							<span class="u-progress-placeholder"></span>
+						</div>
+						<div class="u-progress-bar total-steps-2">
+							<div class="u-progress-bar-inner"></div>
+						</div>
+					</div>
+					<form class="am-form am-form-horizontal" action="__URL__/doidcard" method="post">
+						<div class="am-form-group bind">
+							<label for="user-info" class="am-form-label">用户名</label>
+							<div class="am-form-content">
+								<span id="user-info">{$Think.session.username2}</span>
+							</div>
+						</div>
+						<div class="am-form-group">
+							<label for="user-name" class="am-form-label">真实姓名</label>
+							<div class="am-form-content">
+								<input type="text" id="user-name" name="uname" placeholder="请输入您的真实姓名"><span></span>
+							</div>
+						</div>
+						<div class="am-form-group">
+							<label for="user-IDcard" class="am-form-label">身份证号</label>
+							<div class="am-form-content">
+								<input type="tel" id="user-IDcard" name="card" placeholder="请输入您的身份证信息"><span></span>
+							</div>
+						</div>
+						<div class="info-btn">
+							<!-- <div class="am-btn am-btn-danger">保存修改</div> -->
+							<input class="am-btn am-btn-danger" type="submit" value="保存修改">
+
+						</div>
+						<input type="hidden" name="username" value="{$Think.session.username2}">
+					</form>
+				</div>
+				<!--底部-->
+				<div class="footer">
+				</div>
+				<!--底部-->
+				<include file="Public/pfooter"/>
+			</div>
+
+			<aside class="menu">
+				<include file="Public/pleft"/>
+
+			</aside>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+	CNAME=false;
+	 // 给form表单绑定提交事件
+    $("form").submit(function(){
+        if(CNAME){
+            return true;
+        }else{
+            return false;
+        }
+    })
+
+
+    //给input绑定获取焦点事件
+    $("input[name='uname']").focus(function(){
+        //获取属性值
+        $(this).next().html("请输入真实姓名").css('color','red');
+        //添加类的样式
+        $(this).css('border','1px solid #A9A9A9');
+    })
+
+     //检测姓名
+    $("input[name='uname']").blur(function(){
+        // //获取昵称
+        var uname=$(this).val();
+        ss=$(this);
+        // alert(card);
+        if(uname==''){
+        	$(this).next().html("真是姓名不能为空哦");
+            $(this).css('border','1px solid #dddddd');
+            CNAME=false;
+        }else{
+        	ss.css('border','1px solid #dddddd');
+            ss.next().html("").css('color','green');
+            CNAME=true;
+        }
+    })
+
+    //给input绑定获取焦点事件
+    $("input[name='card']").focus(function(){
+        //获取属性值
+        $(this).next().html("请输入身份证信息").css('color','red');
+        //添加类的样式
+        $(this).css('border','1px solid #A9A9A9');
+    })
+	
+	 //检测身份证
+    $("input[name='card']").blur(function(){
+        // //获取昵称
+        var card=$(this).val();
+        // alert(card);
+        if(card==''){
+        	$(this).next().html("身份证不能为空哦");
+            $(this).css('border','1px solid #dddddd');
+            CNAME=false;
+        }else{
+        	 //正则
+        	 //!(/(^\d{15}$)|(^\d{17}([0-9]|X)$)/.test(num))
+            // var reg=/^\w{6,18}$/;
+            if(!(/(^\d{15}$)|(^\d{17}([0-9]|X)$)/.test(card))){
+                $(this).next().html('身份证有误');
+                CNAME=false;
+            }else{
+                //Ajax
+              // alert('2');
+               s=$(this);
+                $.get('__URL__/docard',{card:card},function(data){
+                   // alert(data);
+                    if(data==1){
+                        s.next().html('身份证已被实名认证了').css('color','red');
+                        CNAME=false;
+                    }else{
+                        s.css('border','1px solid #dddddd');
+                        s.next().html("").css('color','green');
+                        CNAME=true;
+                    }
+                });
+            }  
+        }
+    })
+	</script>
+
+</html>

@@ -1,0 +1,60 @@
+<extend name="Public:public"/>
+<block name="orderedit">
+  <html>
+ <head></head>
+ <body>
+  <div class="mws-panel grid_8"> 
+   <div class="mws-panel-header"> 
+    <span>订单修改</span> 
+   </div> 
+   <div class="mws-panel-body no-padding"> 
+    <form class="mws-form" action="__URL__/update" method="post"> 
+     <div class="mws-form-inline"> 
+     <!--  <div class="mws-form-row"> 
+       <label class="mws-form-label">收货地址</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="address" value="{$info['address']}"/> 
+       </div> 
+      </div>  -->
+      
+       <div class="mws-form-row"> 
+       <label class="mws-form-label">状态</label> 
+       <div class="mws-form-item"> 
+       <!--  <input class="large" type="text" name="status" value="<if condition='$info.status eq "1"'>新添加</if><if condition='$info.status eq "2"'>已发货</if><if condition='$info.status eq "3"'>已收货</if>"/>  -->
+            <!-- <if condition="$info.status eq '1'" >新订单</if> -->
+            <!-- {$info['status']?$info['msg']:$info['error']} -->
+           <input type="radio" name="status" value="1" <if condition="$info['status'] eq 1">checked</if> {$info['status']>1?'disabled':''}>新订单&nbsp;&nbsp;&nbsp;
+           <input type="radio" name="status" value="2" <if condition="$info['status'] eq 2">checked</if>{$info['status']>2?'disabled':''}>已发货&nbsp;&nbsp;&nbsp;
+           <!-- <input type="radio" name="status" value="3" <if condition="$info['status'] eq 3">checked</if>{$info['status']>3?'disabled':''}>已收货&nbsp;&nbsp;&nbsp; -->
+           <!-- <input type="radio" name="status" value="4" <if condition="$info['status'] eq 4">checked</if>{$info['status']>4?'disabled':''}>无效订单 -->
+       </div> 
+      </div> 
+
+      <!--  <div class="mws-form-row"> 
+       <label class="mws-form-label">收货人</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="sname" value="{$info['sname']}"/> 
+       </div> 
+      </div> 
+        -->
+    <!--   <div class="mws-form-row"> 
+       <label class="mws-form-label">电话</label> 
+       <div class="mws-form-item"> 
+        <input class="large" type="text" name="phone" value="{$info['phone']}"/> 
+       </div> 
+      </div>  -->
+      
+     <div class="mws-button-row"> 
+      <input type="hidden" name="id" value="{$info['id']}">
+      <input value="修改" class="btn btn-danger" type="submit" /> 
+      <input value="重置" class="btn " type="reset" /> 
+     </div> 
+    </form> 
+   </div> 
+  </div>
+ </body>
+</html>
+</block>
+<block name="title">
+  订单修改
+</block>
